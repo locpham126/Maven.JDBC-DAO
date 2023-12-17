@@ -16,6 +16,7 @@ public class TheDao implements CarDAO{
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Cars WHERE id=" + id);
 
+//          creates instance of Car DTO based on found id
             if(rs.next())
             {
                 Car car = new Car();
